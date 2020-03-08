@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="App description">
+
+    <% for (var chunk in htmlWebpackPlugin.files.css) { %>
+      <link rel="preload" href="<%= htmlWebpackPlugin.files.css[chunk] %>" as="style" onload="this.rel='stylesheet'">
+    <% } %>
+
+    <title>FCC: Drum Machine</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <% for (var chunk in htmlWebpackPlugin.files.js) { %>
+      <link rel="preload" href="<%= htmlWebpackPlugin.files.js[chunk] %>" as="script">
+      <script src="<%= htmlWebpackPlugin.files.js[chunk] %>"></script>
+    <% } %>
+
+    <script>
+      // const projectName = 'drum-machine';
+    </script>
+<!--    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+  </body>
+</html>

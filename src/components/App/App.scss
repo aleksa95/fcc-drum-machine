@@ -1,0 +1,46 @@
+@import "partials/text";
+@import "partials/colors";
+@import "partials/variables";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-regular;
+  font-family: $main-font;
+}
+
+button, input {
+  font-family: $main-font;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.width-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+input:invalid {
+  box-shadow: none;
+}
